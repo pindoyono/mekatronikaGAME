@@ -64,7 +64,7 @@ const GAME_REGISTRY = {
             className: 'ElectronicBingo',
             skill: 'Quick Recognition',
             duration: '20-25 min',
-            implemented: false
+            implemented: true
         }
     ],
 
@@ -88,11 +88,11 @@ const GAME_REGISTRY = {
             icon: '🔬',
             description: 'Test components with virtual multimeter',
             difficulty: 'Intermediate',
-            file: 'ComponentTester.js',
+            file: 'QuickGames.js',
             className: 'ComponentTester',
             skill: 'Testing & Measurement',
             duration: '25-30 min',
-            implemented: false
+            implemented: true
         },
         {
             id: 8,
@@ -100,11 +100,11 @@ const GAME_REGISTRY = {
             icon: '📍',
             description: 'Identify IC pins and their functions',
             difficulty: 'Intermediate',
-            file: 'PinIdentifier.js',
+            file: 'QuickGames.js',
             className: 'PinIdentifier',
             skill: 'IC Pinout Knowledge',
             duration: '15-20 min',
-            implemented: false
+            implemented: true
         },
         {
             id: 9,
