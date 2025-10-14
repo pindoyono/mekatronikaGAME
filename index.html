@@ -14,8 +14,8 @@
     <link rel="manifest" href="manifest.json">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="css/main.css?v=4.2">
-    <link rel="stylesheet" href="css/games.css?v=4.2">
+    <link rel="stylesheet" href="css/main.css?v=4.3">
+    <link rel="stylesheet" href="css/games.css?v=4.3">
     <link rel="stylesheet" href="css/animations.css">
 
     <style>
@@ -299,50 +299,26 @@
 
     <!-- Component Scripts -->
     <script src="js/components/ComponentLibrary.js"></script>
-    <!-- TODO: Uncomment when implemented
-    <script src="js/components/Circuit.js"></script>
-    <script src="js/components/Breadboard.js"></script>
-    -->
+    
+    <!-- Game Registry - Central configuration for all 25 games -->
+    <script src="js/GameRegistry.js"></script>
 
-    <!-- Utility Scripts -->
-    <!-- TODO: Uncomment when implemented
-    <script src="js/utils/Physics.js"></script>
-    <script src="js/utils/Calculator.js"></script>
-    -->
-
-    <!-- Game Level Scripts - Only load implemented games -->
+    <!-- Game Level Scripts - Beginner Level (1-5) -->
     <script src="js/levels/beginner/FlashCards.js"></script>
-    <script src="js/levels/intermediate/ColorCodeMaster.js"></script>
-
-    <!-- TODO: Uncomment as games are implemented
     <script src="js/levels/beginner/FindComponent.js"></script>
     <script src="js/levels/beginner/SymbolMemory.js"></script>
     <script src="js/levels/beginner/SortingGame.js"></script>
-    <script src="js/levels/beginner/ElectronicBingo.js"></script>
+    <!-- <script src="js/levels/beginner/ElectronicBingo.js"></script> TODO -->
 
-    <script src="js/levels/intermediate/ComponentTester.js"></script>
-    <script src="js/levels/intermediate/PinIdentifier.js"></script>
-    <script src="js/levels/intermediate/CapacitorDecoder.js"></script>
-    <script src="js/levels/intermediate/DiodeDetective.js"></script>
-    <script src="js/levels/intermediate/ValueCalculator.js"></script>
+    <!-- Intermediate Level (6-11) -->
+    <script src="js/levels/intermediate/ColorCodeMaster.js"></script>
 
-    <script src="js/levels/advanced/CircuitBuilderPro.js"></script>
-    <script src="js/levels/advanced/BreadboardWiring.js"></script>
-    <script src="js/levels/advanced/TroubleshootCircuit.js"></script>
-    <script src="js/levels/advanced/PowerSupplyDesigner.js"></script>
-    <script src="js/levels/advanced/SignalFlowAdventure.js"></script>
-    <script src="js/levels/advanced/ICFunctionMaster.js"></script>
-
-    <script src="js/levels/expert/CircuitDesignChallenge.js"></script>
-    <script src="js/levels/expert/PCBLayoutPuzzle.js"></script>
-    <script src="js/levels/expert/OscilloscopeMaster.js"></script>
-    <script src="js/levels/expert/SensorIntegration.js"></script>
-    <script src="js/levels/expert/MotorControlDesigner.js"></script>
-    <script src="js/levels/expert/FilterDesignWorkshop.js"></script>
-
-    <script src="js/levels/special/ElectronicsLabStory.js"></script>
-    <script src="js/levels/special/ComponentBattleArena.js"></script>
-    -->
+    <!-- Intermediate Level (6-11) -->
+    <script src="js/levels/intermediate/ColorCodeMaster.js"></script>
+    
+    <!-- TODO: Advanced Level (12-17) - To be implemented -->
+    <!-- TODO: Expert Level (18-23) - To be implemented -->
+    <!-- TODO: Special Games (24-25) - To be implemented -->
 
     <!-- Main App Script -->
     <script src="js/app.js"></script>
