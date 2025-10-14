@@ -1,0 +1,32 @@
+{
+    "name": "Mekatronika Master",
+    "short_name": "MekatroGame",
+    "description": "Educational Electronics Game - Learn Electronics Through Interactive Games",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#2196F3",
+    "theme_color": "#2196F3",
+    "orientation": "any",
+    "icons": [
+        {
+            "src": "/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": [
+        "education",
+        "games"
+    ],
+    "lang": "id-ID",
+    "dir": "ltr",
+    "scope": "/",
+    "prefer_related_applications": false
+}
