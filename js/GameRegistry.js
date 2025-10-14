@@ -116,7 +116,7 @@ const GAME_REGISTRY = {
             className: 'CapacitorDecoder',
             skill: 'Capacitor Markings',
             duration: '18-22 min',
-            implemented: false
+            implemented: true
         },
         {
             id: 10,
@@ -128,7 +128,7 @@ const GAME_REGISTRY = {
             className: 'DiodeDetective',
             skill: 'Diode Identification',
             duration: '15-20 min',
-            implemented: false
+            implemented: true
         },
         {
             id: 11,
@@ -152,11 +152,11 @@ const GAME_REGISTRY = {
             icon: '⚡',
             description: 'Build basic circuits from schematic',
             difficulty: 'Advanced',
-            file: 'CircuitBuilder.js',
+            file: 'AdvancedGames.js',
             className: 'CircuitBuilder',
             skill: 'Circuit Assembly',
             duration: '30-35 min',
-            implemented: false
+            implemented: true
         },
         {
             id: 13,
@@ -164,11 +164,11 @@ const GAME_REGISTRY = {
             icon: '📐',
             description: 'Read and interpret circuit schematics',
             difficulty: 'Advanced',
-            file: 'SchematicReader.js',
+            file: 'AdvancedGames.js',
             className: 'SchematicReader',
             skill: 'Schematic Reading',
             duration: '25-30 min',
-            implemented: false
+            implemented: true
         },
         {
             id: 14,
@@ -200,11 +200,11 @@ const GAME_REGISTRY = {
             icon: '⚖️',
             description: 'Calculate voltage divider circuits',
             difficulty: 'Advanced',
-            file: 'VoltageDivider.js',
+            file: 'AdvancedGames.js',
             className: 'VoltageDivider',
             skill: 'Circuit Calculations',
             duration: '20-25 min',
-            implemented: false
+            implemented: true
         },
         {
             id: 17,
@@ -212,11 +212,11 @@ const GAME_REGISTRY = {
             icon: '💡',
             description: 'Design LED circuits with proper resistors',
             difficulty: 'Advanced',
-            file: 'LEDCalculator.js',
+            file: 'AdvancedGames.js',
             className: 'LEDCalculator',
             skill: 'LED Circuit Design',
             duration: '15-20 min',
-            implemented: false
+            implemented: true
         }
     ],
 
