@@ -52,18 +52,10 @@ class QuizMaster {
     }
     
     start() {
-
-    
-        console.log(\'🎓 Starting QuizMaster Game');
-
-    
+        console.log('🎓 Starting QuizMaster Game');
         this.init();
-
-    
     }
 
-
-    
     init() {
         console.log('Quiz Master initialized');
         const gameArea = document.getElementById('game-area');
