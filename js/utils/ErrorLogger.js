@@ -263,17 +263,189 @@
         
         console.log('─'.repeat(50));
     }
+
+    /**
+     * Download error log as file
+     */
+    downloadErrorLog() {
+        const report = this.exportReport();
+        const filename = `mekatronika-error-log-${new Date().toISOString().replace(/[:.]/g, '-')}.json`;
+        
+        const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        
+        console.log(`📥 Error log downloaded: ${filename}`);
+        return filename;
+    }
+
+    /**
+     * Save errors to localStorage
+     */
+    saveToLocalStorage() {
+        try {
+            const data = {
+                errors: this.errors,
+                warnings: this.warnings,
+                savedAt: new Date().toISOString()
+            };
+            localStorage.setItem('mekatronika_error_log', JSON.stringify(data));
+            console.log('💾 Errors saved to localStorage');
+        } catch (e) {
+            console.error('Failed to save errors:', e);
+        }
+    }
+
+    /**
+     * Load errors from localStorage
+     */
+    loadFromLocalStorage() {
+        try {
+            const saved = localStorage.getItem('mekatronika_error_log');
+            if (saved) {
+                const data = JSON.parse(saved);
+                this.errors = data.errors || [];
+                this.warnings = data.warnings || [];
+                console.log(`📂 Loaded ${this.errors.length} errors from localStorage`);
+            }
+        } catch (e) {
+            console.error('Failed to load errors:', e);
+        }
+    }
+
+    /**
+     * Show error viewer modal
+     */
+    showErrorViewer() {
+        const modal = document.getElementById('modal-overlay') || this.createModal();
+        const body = document.getElementById('modal-body');
+        
+        if (!body) return;
+
+        const stats = {
+            total: this.errors.length,
+            runtime: this.errors.filter(e => e.type === 'Runtime Error').length,
+            promise: this.errors.filter(e => e.type === 'Unhandled Promise Rejection').length
+        };
+
+        body.innerHTML = `
+            <div class="error-viewer-container">
+                <h2 style="text-align: center; color: #e74c3c;">🚨 Error Log Viewer</h2>
+                
+                <div class="error-stats" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin: 20px 0;">
+                    <div style="background: #e74c3c; color: white; padding: 20px; border-radius: 10px; text-align: center;">
+                        <div style="font-size: 2rem; font-weight: bold;">${stats.total}</div>
+                        <div>Total Errors</div>
+                    </div>
+                    <div style="background: #f39c12; color: white; padding: 20px; border-radius: 10px; text-align: center;">
+                        <div style="font-size: 2rem; font-weight: bold;">${stats.runtime}</div>
+                        <div>Runtime Errors</div>
+                    </div>
+                    <div style="background: #9b59b6; color: white; padding: 20px; border-radius: 10px; text-align: center;">
+                        <div style="font-size: 2rem; font-weight: bold;">${stats.promise}</div>
+                        <div>Promise Rejections</div>
+                    </div>
+                </div>
+
+                <div style="margin: 20px 0; display: flex; gap: 10px;">
+                    <button class="btn btn-primary" onclick="errorLogger.downloadErrorLog()">📥 Download Log</button>
+                    <button class="btn btn-secondary" onclick="errorLogger.clear(); errorLogger.showErrorViewer()">🗑️ Clear All</button>
+                    <button class="btn btn-secondary" onclick="document.getElementById('modal-overlay').style.display='none'">✖️ Close</button>
+                </div>
+
+                <div class="error-list" style="max-height: 400px; overflow-y: auto;">
+                    <h3>Error Details (Latest ${Math.min(20, this.errors.length)})</h3>
+                    ${this.errors.slice(-20).reverse().map((error, i) => `
+                        <div style="background: #fff; border-left: 4px solid #e74c3c; padding: 15px; margin-bottom: 10px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                                <strong style="color: #e74c3c;">${error.type}</strong>
+                                <small style="color: #666;">${new Date(error.timestamp).toLocaleString()}</small>
+                            </div>
+                            <div style="font-family: monospace; color: #c0392b; margin-bottom: 10px;">${this.escapeHtml(error.message)}</div>
+                            ${error.source ? `<div style="font-size: 0.85rem; color: #7f8c8d;">📍 ${error.source}:${error.line}:${error.column}</div>` : ''}
+                            ${error.stack ? `<details style="margin-top: 10px;"><summary style="cursor: pointer; color: #3498db;">Stack Trace</summary><pre style="background: #2c3e50; color: #ecf0f1; padding: 10px; border-radius: 5px; overflow-x: auto; font-size: 0.85rem; margin-top: 10px;">${this.escapeHtml(error.stack)}</pre></details>` : ''}
+                        </div>
+                    `).join('')}
+                    ${this.errors.length === 0 ? '<p style="text-align: center; color: #27ae60; font-size: 1.2rem; padding: 40px;">✅ No errors logged yet!</p>' : ''}
+                </div>
+            </div>
+        `;
+
+        modal.style.display = 'flex';
+    }
+
+    /**
+     * Create modal if doesn't exist
+     */
+    createModal() {
+        const modal = document.createElement('div');
+        modal.id = 'modal-overlay';
+        modal.style.cssText = 'display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 10000; align-items: center; justify-content: center; padding: 20px;';
+        
+        const content = document.createElement('div');
+        content.style.cssText = 'background: #f8f9fa; border-radius: 15px; padding: 30px; max-width: 900px; width: 100%; max-height: 90vh; overflow-y: auto;';
+        content.id = 'modal-body';
+        
+        modal.appendChild(content);
+        document.body.appendChild(modal);
+        
+        return modal;
+    }
+
+    /**
+     * Escape HTML
+     */
+    escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text || '';
+        return div.innerHTML;
+    }
     }
 
     // Create global instance
     const errorLogger = new ErrorLogger();
 
+    // Make it globally accessible
+    window.errorLogger = errorLogger;
+
     // Add global helper functions
     window.debugGame = () => errorLogger.exportReport();
     window.clearDebug = () => errorLogger.clear();
     window.showDebug = () => errorLogger.printSummary();
+    window.showErrors = () => errorLogger.showErrorViewer();
+    window.downloadErrors = () => errorLogger.downloadErrorLog();
+
+    // Add keyboard shortcut: Ctrl+Shift+E to open error viewer
+    document.addEventListener('keydown', (e) => {
+        if (e.ctrlKey && e.shiftKey && e.key === 'E') {
+            e.preventDefault();
+            errorLogger.showErrorViewer();
+        }
+    });
+
+    // Auto-save errors every 30 seconds
+    setInterval(() => {
+        if (errorLogger.errors.length > 0) {
+            errorLogger.saveToLocalStorage();
+        }
+    }, 30000);
+
+    // Load previous errors on startup
+    errorLogger.loadFromLocalStorage();
 
     // Log when scripts are loaded
     console.log('✅ ErrorLogger loaded');
+    console.log('📋 Commands available:');
+    console.log('  - showErrors() : Open error viewer');
+    console.log('  - downloadErrors() : Download error log');
+    console.log('  - clearDebug() : Clear all logs');
+    console.log('  - showDebug() : Show debug summary');
+    console.log('  - Ctrl+Shift+E : Keyboard shortcut for error viewer');
 
 })(); // End of IIFE
