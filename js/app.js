@@ -23,19 +23,27 @@ document.addEventListener('DOMContentLoaded', () => {
         console.warn('⚠️ Loading progress element not found');
     }
     
-    // Check if GameEngine is loaded
+    // Check if GameEngine class is loaded
     if (typeof GameEngine === 'undefined') {
         console.error('❌ GameEngine class not found!');
+        alert('Error: GameEngine class not loaded. Please refresh the page.');
         return;
     }
     console.log('✅ GameEngine class loaded');
     
-    // Check if gameEngine instance exists
+    // Check if gameEngine instance exists, create if not
     if (typeof gameEngine === 'undefined') {
-        console.error('❌ gameEngine instance not found!');
-        return;
+        console.warn('⚠️ gameEngine instance not found, creating new instance...');
+        window.gameEngine = new GameEngine();
+        console.log('✅ gameEngine instance created');
+    } else {
+        console.log('✅ gameEngine instance found');
     }
-    console.log('✅ gameEngine instance found');
+    
+    // Make sure it's globally accessible
+    if (!window.gameEngine) {
+        window.gameEngine = gameEngine;
+    }
     
     // Initialize game engine
     try {
@@ -43,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('✅ Game engine initialized');
     } catch (error) {
         console.error('❌ Error initializing game engine:', error);
+        alert('Error initializing game: ' + error.message);
         return;
     }
     
@@ -94,7 +103,7 @@ function startGame() {
         }
         
         console.log('🎮 Starting game:', gameToStart);
-        gameEngine.loadGame(gameToStart);
+        gameEngine.startGame(gameToStart);
     } catch (error) {
         console.error('❌ Error in startGame():', error);
     }
