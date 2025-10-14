@@ -140,7 +140,7 @@ const GAME_REGISTRY = {
             className: 'SMDChallenge',
             skill: 'SMD Recognition',
             duration: '20-25 min',
-            implemented: false
+            implemented: true
         }
     ],
 
@@ -176,11 +176,11 @@ const GAME_REGISTRY = {
             icon: '🎯',
             description: 'Master breadboard prototyping',
             difficulty: 'Advanced',
-            file: 'BreadboardMaster.js',
+            file: 'BreadboardTroubleshoot.js',
             className: 'BreadboardMaster',
             skill: 'Breadboarding',
             duration: '30-40 min',
-            implemented: false
+            implemented: true
         },
         {
             id: 15,
@@ -188,11 +188,11 @@ const GAME_REGISTRY = {
             icon: '🔧',
             description: 'Find and fix circuit problems',
             difficulty: 'Advanced',
-            file: 'Troubleshooter.js',
+            file: 'BreadboardTroubleshoot.js',
             className: 'Troubleshooter',
             skill: 'Troubleshooting',
             duration: '35-45 min',
-            implemented: false
+            implemented: true
         },
         {
             id: 16,
