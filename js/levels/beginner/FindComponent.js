@@ -34,10 +34,15 @@ class FindComponent {
         ];
     }
 
-    init() {
-        console.log('Find Component Game initialized');
+    start() {
+        console.log('🔍 Starting Find Component Game');
         this.setupUI();
         this.startLevel();
+    }
+
+    init() {
+        console.log('Find Component Game initialized');
+        this.start();
     }
 
     setupUI() {

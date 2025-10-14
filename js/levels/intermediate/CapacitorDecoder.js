@@ -30,9 +30,14 @@ class CapacitorDecoder {
         ];
     }
 
-    init() {
+    start() {
+        console.log('⚡ Starting Capacitor Decoder Game');
         this.setupUI();
         this.nextQuestion();
+    }
+
+    init() {
+        this.start();
     }
 
     setupUI() {

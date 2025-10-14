@@ -34,10 +34,15 @@ class SymbolMemory {
         ];
     }
 
-    init() {
-        console.log('Symbol Memory Game initialized');
+    start() {
+        console.log('🧠 Starting Symbol Memory Game');
         this.setupUI();
         this.startGame();
+    }
+
+    init() {
+        console.log('Symbol Memory Game initialized');
+        this.start();
     }
 
     setupUI() {

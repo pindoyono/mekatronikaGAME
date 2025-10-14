@@ -99,6 +99,11 @@ void loop() {
         ];
     }
     
+    start() {
+        console.log('🤖 Starting Arduino Project Challenge');
+        this.init();
+    }
+    
     init() {
         const gameArea = document.getElementById('game-area');
         
@@ -326,6 +331,11 @@ class SensorIntegration {
         ];
     }
     
+    start() {
+        console.log('📡 Starting Sensor Integration Challenge');
+        this.init();
+    }
+    
     init() {
         const gameArea = document.getElementById('game-area');
         gameArea.innerHTML = `
@@ -407,6 +417,11 @@ class MotorControl {
     constructor() {
         this.score = 0;
         this.motorSpeed = 128;
+    }
+    
+    start() {
+        console.log('Starting MotorControl');
+        this.init();
     }
     
     init() {
@@ -533,6 +548,11 @@ class MotorControl {
 class PowerSupplyDesign {
     constructor() {
         this.score = 0;
+    }
+    
+    start() {
+        console.log('Starting PowerSupplyDesign');
+        this.init();
     }
     
     init() {
@@ -668,6 +688,11 @@ class PCBLayout {
         this.score = 0;
     }
     
+    start() {
+        console.log('Starting PCBLayout');
+        this.init();
+    }
+    
     init() {
         const gameArea = document.getElementById('game-area');
         gameArea.innerHTML = `
@@ -770,6 +795,11 @@ class PCBLayout {
 class SignalAnalysis {
     constructor() {
         this.score = 0;
+    }
+    
+    start() {
+        console.log('Starting SignalAnalysis');
+        this.init();
     }
     
     init() {

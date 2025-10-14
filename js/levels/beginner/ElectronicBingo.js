@@ -21,10 +21,15 @@ class ElectronicBingo {
         ];
     }
 
-    init() {
+    start() {
+        console.log('🎯 Starting Electronic Bingo Game');
         this.setupUI();
         this.generateGrid();
         this.startCalling();
+    }
+
+    init() {
+        this.start();
     }
 
     setupUI() {

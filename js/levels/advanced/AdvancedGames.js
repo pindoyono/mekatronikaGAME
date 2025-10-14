@@ -37,9 +37,14 @@ class CircuitBuilder {
         ];
     }
 
-    init() {
+    start() {
+        console.log('⚡ Starting Circuit Builder Game');
         this.setupUI();
         this.loadCircuit();
+    }
+
+    init() {
+        this.start();
     }
 
     setupUI() {
@@ -214,6 +219,11 @@ class SchematicReader {
         ];
     }
 
+    start() {
+        console.log('📐 Starting Breadboard Wiring Game');
+        this.init();
+    }
+
     init() {
         const container = document.getElementById('game-container');
         container.innerHTML = `
@@ -244,6 +254,11 @@ class VoltageDivider {
     constructor(gameEngine) {
         this.gameEngine = gameEngine;
         this.score = 0;
+    }
+
+    start() {
+        console.log('⚖️ Starting Voltage Divider Game');
+        this.init();
     }
 
     init() {
@@ -407,6 +422,11 @@ class LEDCalculator {
     constructor(gameEngine) {
         this.gameEngine = gameEngine;
         this.score = 0;
+    }
+
+    start() {
+        console.log('💡 Starting LED Calculator Game');
+        this.init();
     }
 
     init() {

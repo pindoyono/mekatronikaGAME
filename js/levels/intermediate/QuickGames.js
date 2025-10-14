@@ -20,9 +20,14 @@ class ComponentTester {
         ];
     }
 
-    init() {
+    start() {
+        console.log('🔬 Starting Component Tester Game');
         this.setupUI();
         this.nextTest();
+    }
+
+    init() {
+        this.start();
     }
 
     setupUI() {
@@ -166,9 +171,14 @@ class PinIdentifier {
         ];
     }
 
-    init() {
+    start() {
+        console.log('📍 Starting Pin Identifier Game');
         this.setupUI();
         this.nextIC();
+    }
+
+    init() {
+        this.start();
     }
 
     setupUI() {

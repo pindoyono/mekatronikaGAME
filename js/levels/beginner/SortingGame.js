@@ -39,10 +39,15 @@ class SortingGame {
         ];
     }
 
-    init() {
-        console.log('Sorting Game initialized');
+    start() {
+        console.log('📦 Starting Sorting Game');
         this.setupUI();
         this.startGame();
+    }
+
+    init() {
+        console.log('Sorting Game initialized');
+        this.start();
     }
 
     setupUI() {

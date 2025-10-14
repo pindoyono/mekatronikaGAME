@@ -60,6 +60,11 @@ class SMDChallenge {
         this.questionTypes = ['decode', 'package', 'type', 'compare'];
     }
 
+    start() {
+        console.log('🔬 Starting SMD Challenge Game');
+        this.init();
+    }
+
     init() {
         const container = document.getElementById('game-container');
         container.innerHTML = `

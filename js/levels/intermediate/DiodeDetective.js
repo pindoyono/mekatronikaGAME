@@ -49,9 +49,14 @@ class DiodeDetective {
         ];
     }
 
-    init() {
+    start() {
+        console.log('🔦 Starting Diode Detective Game');
         this.setupUI();
         this.nextQuestion();
+    }
+
+    init() {
+        this.start();
     }
 
     setupUI() {

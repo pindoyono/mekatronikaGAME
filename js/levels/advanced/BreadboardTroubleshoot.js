@@ -14,6 +14,11 @@ class BreadboardMaster {
         this.currentCircuit = null;
     }
     
+    start() {
+        console.log('🎯 Starting Breadboard Master Game');
+        this.init();
+    }
+    
     init() {
         console.log('Breadboard Master initialized');
         const gameArea = document.getElementById('game-area');
@@ -483,6 +488,11 @@ class Troubleshooter {
                 ]
             }
         ];
+    }
+    
+    start() {
+        console.log('🔧 Starting Circuit Troubleshooter Game');
+        this.init();
     }
     
     init() {
