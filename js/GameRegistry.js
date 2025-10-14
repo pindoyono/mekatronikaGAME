@@ -228,11 +228,11 @@ const GAME_REGISTRY = {
             icon: '🤖',
             description: 'Build Arduino-based projects',
             difficulty: 'Expert',
-            file: 'ArduinoProject.js',
+            file: 'ExpertGames.js',
             className: 'ArduinoProject',
             skill: 'Microcontroller',
             duration: '45-60 min',
-            implemented: false
+            implemented: true
         },
         {
             id: 19,
@@ -240,11 +240,11 @@ const GAME_REGISTRY = {
             icon: '📡',
             description: 'Integrate various sensors',
             difficulty: 'Expert',
-            file: 'SensorIntegration.js',
+            file: 'ExpertGames.js',
             className: 'SensorIntegration',
             skill: 'Sensor Applications',
             duration: '40-50 min',
-            implemented: false
+            implemented: true
         },
         {
             id: 20,
@@ -252,11 +252,11 @@ const GAME_REGISTRY = {
             icon: '⚙️',
             description: 'Control DC and servo motors',
             difficulty: 'Expert',
-            file: 'MotorControl.js',
+            file: 'ExpertGames.js',
             className: 'MotorControl',
             skill: 'Motor Driving',
             duration: '35-45 min',
-            implemented: false
+            implemented: true
         },
         {
             id: 21,
@@ -264,11 +264,11 @@ const GAME_REGISTRY = {
             icon: '🔋',
             description: 'Design power supply circuits',
             difficulty: 'Expert',
-            file: 'PowerSupplyDesign.js',
+            file: 'ExpertGames.js',
             className: 'PowerSupplyDesign',
             skill: 'Power Electronics',
             duration: '40-50 min',
-            implemented: false
+            implemented: true
         },
         {
             id: 22,
@@ -276,11 +276,11 @@ const GAME_REGISTRY = {
             icon: '🎨',
             description: 'Learn PCB design basics',
             difficulty: 'Expert',
-            file: 'PCBLayout.js',
+            file: 'ExpertGames.js',
             className: 'PCBLayout',
             skill: 'PCB Design',
             duration: '50-60 min',
-            implemented: false
+            implemented: true
         },
         {
             id: 23,
@@ -288,11 +288,11 @@ const GAME_REGISTRY = {
             icon: '📊',
             description: 'Analyze electronic signals',
             difficulty: 'Expert',
-            file: 'SignalAnalysis.js',
+            file: 'ExpertGames.js',
             className: 'SignalAnalysis',
             skill: 'Signal Processing',
             duration: '45-55 min',
-            implemented: false
+            implemented: true
         }
     ],
 
@@ -304,11 +304,11 @@ const GAME_REGISTRY = {
             icon: '🎓',
             description: 'Comprehensive electronics quiz',
             difficulty: 'All Levels',
-            file: 'QuizMaster.js',
+            file: 'SpecialGames.js',
             className: 'QuizMaster',
             skill: 'Comprehensive Knowledge',
             duration: '30-40 min',
-            implemented: false
+            implemented: true
         },
         {
             id: 25,
@@ -316,11 +316,11 @@ const GAME_REGISTRY = {
             icon: '🏆',
             description: 'Ultimate electronics challenge',
             difficulty: 'Master',
-            file: 'FinalChallenge.js',
+            file: 'SpecialGames.js',
             className: 'FinalChallenge',
             skill: 'All Skills Combined',
             duration: '60+ min',
-            implemented: false
+            implemented: true
         }
     ]
 };
