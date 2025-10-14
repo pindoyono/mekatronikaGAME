@@ -594,11 +594,5 @@ class ColorCodeMaster {
     }
 }
 
+// Export to window
 window.ColorCodeMaster = ColorCodeMaster;
-let colorCodeMaster = null;
-
-const originalStart = ColorCodeMaster.prototype.start;
-ColorCodeMaster.prototype.start = function() {
-    colorCodeMaster = this;
-    originalStart.call(this);
-};

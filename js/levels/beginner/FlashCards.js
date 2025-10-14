@@ -723,15 +723,5 @@ class FlashCards {
     }
 }
 
-// Make it globally accessible
+// Export to window
 window.FlashCards = FlashCards;
-
-// Create global instance reference
-let flashCardsGame = null;
-
-// Override the start method to create instance
-const originalStart = FlashCards.prototype.start;
-FlashCards.prototype.start = function() {
-    flashCardsGame = this;
-    originalStart.call(this);
-};
