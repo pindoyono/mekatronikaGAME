@@ -532,11 +532,18 @@ function populateLevelSelect() {
         container.innerHTML = games.map(game => {
             const gameProgress = gameEngine.progressTracker.getGameProgress(game.id);
             const stars = '⭐'.repeat(gameProgress.stars) + '☆'.repeat(3 - gameProgress.stars);
-            const locked = game.id > 1 && !progress.gamesCompleted.includes(game.id - 1);
+            
+            // DEVELOPMENT MODE: All games unlocked for testing
+            // PRODUCTION: Uncomment line below to enable progressive unlock
+            // const locked = game.id > 1 && !progress.gamesCompleted.includes(game.id - 1);
+            const locked = false; // All games unlocked
+            
+            // Debug logging
+            console.log(`Game ${game.id} (${game.name}): locked=${locked}, className=${game.className}`);
             
             return `
                 <div class="game-card ${gameProgress.completed ? 'completed' : ''} ${locked ? 'locked' : ''}" 
-                     onclick="${locked ? '' : `gameEngine.startGame(${game.id})`}">
+                     onclick="console.log('Card clicked: ${game.name}'); gameEngine.startGame(${game.id});">
                     <div class="game-icon">${game.icon}</div>
                     <div class="game-info">
                         <h4>${game.name}</h4>

@@ -67,3 +67,77 @@
 127.0.0.1 - - [15/Oct/2025 00:48:49] code 404, message File not found
 127.0.0.1 - - [15/Oct/2025 00:48:49] "GET /icon-192.png HTTP/1.1" 404 -
 127.0.0.1 - - [15/Oct/2025 00:48:50] "GET /sw.js HTTP/1.1" 304 -
+127.0.0.1 - - [15/Oct/2025 01:03:07] "GET /js/levels/beginner/SymbolMemory.js HTTP/1.1" 304 -
+127.0.0.1 - - [15/Oct/2025 01:03:07] "GET /js/levels/beginner/FindComponent.js HTTP/1.1" 304 -
+127.0.0.1 - - [15/Oct/2025 01:03:07] "GET /js/levels/intermediate/CapacitorDecoder.js HTTP/1.1" 304 -
+127.0.0.1 - - [15/Oct/2025 01:03:07] "GET /js/levels/intermediate/QuickGames.js HTTP/1.1" 304 -
+127.0.0.1 - - [15/Oct/2025 01:03:07] "GET /js/levels/beginner/SortingGame.js HTTP/1.1" 304 -
+127.0.0.1 - - [15/Oct/2025 01:03:07] "GET /js/levels/beginner/ElectronicBingo.js HTTP/1.1" 304 -
+127.0.0.1 - - [15/Oct/2025 01:03:07] "GET /js/levels/intermediate/DiodeDetective.js HTTP/1.1" 304 -
+127.0.0.1 - - [15/Oct/2025 01:03:07] "GET /js/levels/intermediate/SMDChallenge.js HTTP/1.1" 304 -
+127.0.0.1 - - [15/Oct/2025 01:03:07] "GET /js/levels/advanced/AdvancedGames.js HTTP/1.1" 304 -
+127.0.0.1 - - [15/Oct/2025 01:03:07] "GET /js/levels/advanced/BreadboardTroubleshoot.js HTTP/1.1" 304 -
+127.0.0.1 - - [15/Oct/2025 01:03:07] "GET /js/levels/expert/ExpertGames.js HTTP/1.1" 304 -
+127.0.0.1 - - [15/Oct/2025 01:03:08] "GET /js/levels/special/SpecialGames.js HTTP/1.1" 304 -
+127.0.0.1 - - [15/Oct/2025 01:03:08] code 404, message File not found
+127.0.0.1 - - [15/Oct/2025 01:03:08] "GET /assets/audio/background.mp3 HTTP/1.1" 404 -
+127.0.0.1 - - [15/Oct/2025 01:03:08] "GET /favicon.ico HTTP/1.1" 304 -
+127.0.0.1 - - [15/Oct/2025 01:03:08] "GET /manifest.json HTTP/1.1" 304 -
+127.0.0.1 - - [15/Oct/2025 01:03:09] code 404, message File not found
+127.0.0.1 - - [15/Oct/2025 01:03:09] "GET /icon-192.png HTTP/1.1" 404 -
+127.0.0.1 - - [15/Oct/2025 01:03:09] "GET /sw.js HTTP/1.1" 304 -
+127.0.0.1 - - [15/Oct/2025 01:03:16] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2025 01:03:16] "GET /css/main.css?v=5.0 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2025 01:03:16] "GET /css/games.css?v=5.0 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2025 01:03:16] "GET /css/animations.css?v=5.0 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2025 01:03:16] "GET /js/utils/ErrorLogger.js?v=4 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2025 01:03:16] "GET /js/core/ProgressTracker.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2025 01:03:16] "GET /js/core/AchievementSystem.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2025 01:03:16] "GET /js/core/AudioManager.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2025 01:03:16] "GET /js/core/GameEngine.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2025 01:03:17] "GET /js/components/ComponentLibrary.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2025 01:03:17] "GET /js/GameRegistry.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2025 01:03:17] "GET /js/PlaceholderGames.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2025 01:03:17] "GET /js/levels/beginner/FlashCards.js?v=5 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2025 01:03:17] "GET /js/levels/beginner/FindComponent.js?v=5 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2025 01:03:17] "GET /js/levels/beginner/SymbolMemory.js?v=5 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2025 01:03:17] "GET /js/levels/beginner/SortingGame.js?v=5 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2025 01:03:17] "GET /js/levels/beginner/ElectronicBingo.js?v=5 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2025 01:03:17] "GET /js/levels/intermediate/ColorCodeMaster.js?v=5&t=1760460513 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2025 01:03:17] "GET /js/levels/intermediate/QuickGames.js?v=5 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2025 01:03:17] "GET /js/levels/intermediate/CapacitorDecoder.js?v=5 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2025 01:03:17] "GET /js/levels/intermediate/DiodeDetective.js?v=5 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2025 01:03:17] "GET /js/levels/advanced/AdvancedGames.js?v=5 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2025 01:03:17] "GET /js/levels/intermediate/SMDChallenge.js?v=5 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2025 01:03:17] "GET /js/levels/advanced/BreadboardTroubleshoot.js?v=5 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2025 01:03:17] "GET /js/levels/expert/ExpertGames.js?v=5 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2025 01:03:17] "GET /js/levels/special/SpecialGames.js?v=5 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2025 01:03:17] "GET /js/app.js?v=6 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2025 01:03:18] code 404, message File not found
+127.0.0.1 - - [15/Oct/2025 01:03:18] "GET /assets/audio/background.mp3 HTTP/1.1" 404 -
+127.0.0.1 - - [15/Oct/2025 01:03:18] "GET /favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2025 01:03:18] code 404, message File not found
+127.0.0.1 - - [15/Oct/2025 01:03:18] "GET /icon-192.png HTTP/1.1" 404 -
+127.0.0.1 - - [15/Oct/2025 01:04:57] code 404, message File not found
+127.0.0.1 - - [15/Oct/2025 01:04:57] "GET /assets/audio/background.mp3 HTTP/1.1" 404 -
+127.0.0.1 - - [15/Oct/2025 01:04:59] code 404, message File not found
+127.0.0.1 - - [15/Oct/2025 01:04:59] "GET /icon-192.png HTTP/1.1" 404 -
+127.0.0.1 - - [15/Oct/2025 01:05:01] "GET /sw.js HTTP/1.1" 304 -
+127.0.0.1 - - [15/Oct/2025 01:05:41] code 404, message File not found
+127.0.0.1 - - [15/Oct/2025 01:05:41] "GET /assets/audio/background.mp3 HTTP/1.1" 404 -
+127.0.0.1 - - [15/Oct/2025 01:05:41] code 404, message File not found
+127.0.0.1 - - [15/Oct/2025 01:05:41] "GET /icon-192.png HTTP/1.1" 404 -
+127.0.0.1 - - [15/Oct/2025 01:05:43] "GET /sw.js HTTP/1.1" 304 -
+127.0.0.1 - - [15/Oct/2025 01:14:00] "GET /js/levels/intermediate/QuickGames.js HTTP/1.1" 304 -
+127.0.0.1 - - [15/Oct/2025 01:14:00] "GET /js/levels/intermediate/CapacitorDecoder.js HTTP/1.1" 304 -
+127.0.0.1 - - [15/Oct/2025 01:14:00] "GET /js/levels/intermediate/DiodeDetective.js HTTP/1.1" 304 -
+127.0.0.1 - - [15/Oct/2025 01:14:00] "GET /js/levels/intermediate/SMDChallenge.js HTTP/1.1" 304 -
+127.0.0.1 - - [15/Oct/2025 01:14:00] "GET /js/levels/advanced/AdvancedGames.js HTTP/1.1" 304 -
+127.0.0.1 - - [15/Oct/2025 01:14:00] "GET /js/levels/advanced/BreadboardTroubleshoot.js HTTP/1.1" 304 -
+127.0.0.1 - - [15/Oct/2025 01:14:01] "GET /js/levels/special/SpecialGames.js HTTP/1.1" 304 -
+127.0.0.1 - - [15/Oct/2025 01:14:01] "GET /js/levels/expert/ExpertGames.js HTTP/1.1" 304 -
+127.0.0.1 - - [15/Oct/2025 01:14:01] code 404, message File not found
+127.0.0.1 - - [15/Oct/2025 01:14:01] "GET /assets/audio/background.mp3 HTTP/1.1" 404 -
+127.0.0.1 - - [15/Oct/2025 01:14:01] code 404, message File not found
+127.0.0.1 - - [15/Oct/2025 01:14:01] "GET /icon-192.png HTTP/1.1" 404 -
+127.0.0.1 - - [15/Oct/2025 01:14:03] "GET /sw.js HTTP/1.1" 304 -
